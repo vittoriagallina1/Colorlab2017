@@ -49,10 +49,26 @@ public class TestPicture17
         //access each index
     System.out.println(pixels[17]);
     //access each pixel
-    Pixel spot = ferris1.getPixel(100,100);
-    
+    /*Pixel spot = ferris1.getPixel(100,100);
     System.out.println(pixels[17].getColor());
     System.out.println(spot);
+    System.out.println(pixels[17]);
+//access each pixel
+    //Pixel spot = ferris1.getPixel(100,100);
+    System.out.println(pixels[17].getColor());
+    System.out.println(spot);
+    spot.setColor(Color.red);
+    ferris1.explore();*/
+    Pixel myspot = ferris1.getPixel(800,200);
+    System.out.println(pixels[17].getColor());
+    System.out.println(myspot);
+    System.out.println(pixels[17]);
+//access each pixel
+    //Pixel spot = ferris1.getPixel(100,100);
+    System.out.println(pixels[17].getColor());
+    System.out.println(myspot);
+    myspot.setColor(Color.blue);
+    ferris1.explore();
 /*
     pixels[17].setColor(Color.blue);
     spot.setColor(new Color(252,252,252));
