@@ -30,22 +30,25 @@ public class TestPicture17
      //relative path
      Picture apic = new Picture("images\\beach.jpg");
      Picture ferris1 = new Picture("images/2000 ferris wheel2.jpg");
-     //Picture ferris2 = new Picture("images/2000 ferris wheel2.jpg");
-     //Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
-
-     //apic.explore();
+     Picture ferris2 = new Picture("images/2000 ferris wheel2.jpg");
+     Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
+     Picture blueM1 = new Picture("images/blue-mark.jpg");
+     
+     blueM1.explore();
+     apic.explore();
      ferris1.explore();
      
      //makes an array of pixels
-     Pixel[] pixels;
+     Pixel[] bMpixels;
      //gets pixels from picture and assigns to pixels array
-     pixels = ferris1.getPixels();
+     bMpixels = blueM1.getPixels();
+     
     
-     //how many pixels or how large array
-    System.out.println("This is a large array"+pixels.length  );
+     /*how many pixels or how large array
+    System.out.println("This is a large array" + pixels.length  );
 
 
-    /**/
+    
         //access each index
     System.out.println(pixels[17]);
     //access each pixel
@@ -55,20 +58,19 @@ public class TestPicture17
     Color mycolor = new Color(46, 139, 87);
     pixels[17].setColor(Color.yellow);
     spot.setColor(mycolor);
-    ferris1.explore();
-    
+    ferris1.explore();*/
+    Color aqua = new Color(0, 255, 255);
     //for each loop process the entire array
-    for (Pixel spot1: pixels)
+    for (Pixel spot1: bMpixels)
     {
-        if (spot1.getRed() < 20 && spot1.getBlue() < 20 && spot1.getGreen() < 20)
+        if (spot1.getRed() > 187 && spot1.getRed() < 210)
         {
-            spot1.setBlue(87);
-            spot1.setRed(46);
-            spot1.setGreen(139);
+            spot1.setColor(aqua);
         }
     }
-    ferris1.explore();
-    System.out.println(pixels[17]);
+    blueM1.explore();
+
+    blueM1.write("images/blue-mark2.jpg");
 //access each pixel
     /*Pixel spot = ferris1.getPixel(100,100);
     System.out.println(pixels[17].getColor());
@@ -112,7 +114,7 @@ public class TestPicture17
         {
             //set the red value of the current pixel to the new value
            
-
+            
         }
     ferris1.explore();
     
