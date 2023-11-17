@@ -16,4 +16,6 @@ Additionally, there wasn't enough of the ivory/off-white color in the face, whic
 expanded the range for the ivory so that it started a little lower and would replace some of the light blue in some spots. 
 And then, for the second picture, I also wanted to highlight some of the texture on my jacket. To do this, I expanded the range of the red so that the jacket wouldn't
 be almost all blue like it was in the first picture and had some red where the lines were. For the third picture, the first time I ran it, I noticed that it almost
-looked nengative because the colors were too bright. I toned them down and this really brought out the depth of the image.
+looked nengative because the colors were too bright. I toned them down and this really brought out the depth of the image. After that. I noticed that the bluegreen,
+was being used on the majority of the face and was being used on the eyes. To fix this, I moved the yellowgreen color to the fourth subset and the bluegreen to the third,
+which really lightened the eyes

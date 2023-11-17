@@ -31,10 +31,16 @@ public class SheparFaireyLab
          Picture me = new Picture("images/selfie.jpg");
          Picture me1 = new Picture("images/selfie.jpg");
          Picture me2 = new Picture("images/selfie.jpg");
+         Picture me3 = new Picture("images/selfie.jpg");
+         Picture me4 = new Picture("images/selfie.jpg");
+         Picture me5 = new Picture("images/selfie.jpg");
          
          Pixel[] selfie = me.getPixels();
          Pixel[] selfie1 = me1.getPixels();
          Pixel[] selfie2 = me2.getPixels();
+         Pixel[] selfie3 = me3.getPixels();
+         Pixel[] selfie4 = me4.getPixels();
+         Pixel[] selfie5 = me5.getPixels();
          
          //method 1 change
          for (Pixel spot1: selfie)
@@ -183,9 +189,136 @@ public class SheparFaireyLab
          }
          me2.explore();
          
+         //Revision 1
+         for (Pixel spot2: selfie3)
+         {
+             int blue = spot2.getBlue();
+             int red = spot2.getRed();
+             int green = spot2.getGreen();
+             int greyvalue = (blue + red + green)/3;
+             if (greyvalue >= small && greyvalue < ((big-small)/4))
+             {
+                 int newblue = 114;
+                 int newgreen = 42;
+                 int newred = 88;
+                 Color lilac = new Color(newred, newgreen, newblue);
+                 spot2.setColor(lilac);
+             }
+             if (greyvalue >= ((big-small)/4) && greyvalue < ((big-small)/2))
+             {
+                 int newblue = 57;
+                 int newgreen = 107;
+                 int newred = 170;
+                 Color pastelred = new Color(newred, newgreen, newblue);
+                 spot2.setColor(pastelred);
+             }
+             if (greyvalue >= ((big-small)/2) && greyvalue < (3*(big-small)/4))
+             {
+                 int newblue = 57;
+                 int newgreen = 170;
+                 int newred = 170;
+                 Color yellowgreen = new Color(newred, newgreen, newblue);
+                 spot2.setColor(yellowgreen);
+             }
+             if (greyvalue >=  ((big-small)*0.75) && greyvalue <= big)
+             {
+                 int newblue = 100;
+                 int newgreen = 103;
+                 int newred = 34;
+                 Color bluegreen = new Color(newred, newgreen, newblue);
+                 spot2.setColor(bluegreen);
+             }
+         }
+         me3.explore();
+         
+         //Revision 2
+         for (Pixel spot2: selfie4)
+         {
+             int blue = spot2.getBlue();
+             int red = spot2.getRed();
+             int green = spot2.getGreen();
+             int greyvalue = (blue + red + green)/3;
+             if (greyvalue >= small && greyvalue < ((big-small)/4))
+             {
+                 int newblue = 100;
+                 int newgreen = 103;
+                 int newred = 34;
+                 Color bluegreen = new Color(newred, newgreen, newblue);
+                 spot2.setColor(bluegreen);
+             }
+             if (greyvalue >= ((big-small)/4) && greyvalue < ((big-small)/2))
+             {
+                 int newblue = 114;
+                 int newgreen = 42;
+                 int newred = 88;
+                 Color lilac = new Color(newred, newgreen, newblue);
+                 spot2.setColor(lilac);
+             }
+             if (greyvalue >= ((big-small)/2) && greyvalue < (3*(big-small)/4))
+             {
+                 int newblue = 57;
+                 int newgreen = 107;
+                 int newred = 170;
+                 Color pastelred = new Color(newred, newgreen, newblue);
+                 spot2.setColor(pastelred);
+             }
+             if (greyvalue >=  ((big-small)*0.75) && greyvalue <= big)
+             {
+                 int newblue = 57;
+                 int newgreen = 170;
+                 int newred = 170;
+                 Color yellowgreen = new Color(newred, newgreen, newblue);
+                 spot2.setColor(yellowgreen);
+             }
+         }
+         me4.explore();
+         
+         //Revision 2
+         for (Pixel spot2: selfie5)
+         {
+             int blue = spot2.getBlue();
+             int red = spot2.getRed();
+             int green = spot2.getGreen();
+             int greyvalue = (blue + red + green)/3;
+             if (greyvalue >= small && greyvalue < ((big-small)/4))
+             {
+                 int newblue = 100;
+                 int newgreen = 103;
+                 int newred = 34;
+                 Color bluegreen = new Color(newred, newgreen, newblue);
+                 spot2.setColor(bluegreen);
+             }
+             if (greyvalue >= ((big-small)/4) && greyvalue < ((big-small)/2))
+             {
+                 int newblue = 114;
+                 int newgreen = 42;
+                 int newred = 88;
+                 Color lilac = new Color(newred, newgreen, newblue);
+                 spot2.setColor(lilac);
+             }
+             if (greyvalue >= ((big-small)/2) && greyvalue < (3*(big-small)/4))
+             {
+                 int newblue = 57;
+                 int newgreen = 107;
+                 int newred = 170;
+                 Color pastelred = new Color(newred, newgreen, newblue);
+                 spot2.setColor(pastelred);
+             }
+             if (greyvalue >=  ((big-small)*0.75) && greyvalue <= big)
+             {
+                 int newblue = 240;
+                 int newgreen = 232;
+                 int newred = 236;
+                 Color offwhite = new Color(newred, newgreen, newblue);
+                 spot2.setColor(offwhite);
+             }
+         }
+         me5.explore();
+         
          me.write("images/SFtry1.jpg");
          me1.write("images/SFtry2.jpg");
-         me2.write("images/pic3.jpg");
          me2.write("images/SFtry3.jpg");
+         me3.write("images/revision1.jpg");
+         me4.write("images/revision2.jpg");
     }//main       
 }//class
